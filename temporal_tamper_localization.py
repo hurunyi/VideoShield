@@ -168,7 +168,7 @@ def main(args):
         pred_frame_ids = pred_frame_ids.masked_fill(pred_mask, -1)[1:]
         gt_frame_ids = torch.Tensor(frame_ids)[1:]
         acc_metric = (gt_frame_ids.cpu() == pred_frame_ids.cpu()).float().mean().item()
-        print(f'Localization accuracy: {acc_metric:.3f}')
+        print(f'Localization accuracy: {acc_metric:.3f}.')
 
 
 if __name__ == '__main__':

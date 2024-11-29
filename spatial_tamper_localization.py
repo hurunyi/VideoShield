@@ -269,7 +269,7 @@ def main(args):
         np.stack(mask_pred, axis=0).flatten(),
         np.stack(mask_gt, axis=0).flatten()
     )
-    print(f'Localization performance: f1={f1:.3f}, precision={precision:.3f}, recall={recall:.3f}, iou={iou:.3f}, auc={auc:.3f}')
+    print(f'Localization performance: f1={f1:.3f}, precision={precision:.3f}, recall={recall:.3f}, iou={iou:.3f}, auc={auc:.3f}.')
 
 
 if __name__ == '__main__':

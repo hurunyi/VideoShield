@@ -74,7 +74,7 @@ def main(args):
         video_dir = os.path.join(output_dir, video_id)
         os.makedirs(video_dir, exist_ok=True)
 
-        print(f'Generating for prompt: {current_prompt}')
+        print(f'Generating for prompt: {current_prompt}.')
 
         # generate with watermark
         init_latents_w = watermark.create_watermark_and_return_w()
@@ -114,10 +114,13 @@ def main(args):
         else:
             raise ValueError
 
-        export_to_video(video_frames_w, output_video_path=os.path.join(video_dir, f'wm.mp4'))
+        save_mp4_path = os.path.join(video_dir, f'wm.mp4')
+        export_to_video(video_frames_w, output_video_path=save_mp4_path)
+        print(f'The generated video is saved to {save_mp4_path}.')
         frames_dir = f'{video_dir}/wm/frames'
         os.makedirs(frames_dir, exist_ok=True)
         save_video_frames(video_frames_w, frames_dir)
+        print(f'The generated video frames are saved to {frames_dir}.')
 
         first_frame = cv2_to_pil(video_frames_w[0])
         video_frames_w = transform_video(video_frames_w).to(video_pipe.vae.dtype).to(device)
@@ -126,7 +129,7 @@ def main(args):
         else:
             video_latents_w = get_video_latents(video_pipe.vae, video_frames_w, sample=False, permute=True)
 
-        print(f'Watermark extraction')
+        print(f'Watermark extraction:')
         video_pipe.scheduler = inverse_scheduler
         if model_name == 'modelscope':
             # assume at the detection time, the original prompt is unknown
@@ -155,7 +158,7 @@ def main(args):
         if model_name == 'stable-video-diffusion':
             reversed_latents_w = reversed_latents_w.permute(0, 2, 1, 3, 4)
         acc_metric = watermark.eval_watermark(reversed_latents_w)
-        print(f'Watermark extraction accuracy: {acc_metric}')
+        print(f'Watermark extraction accuracy: {acc_metric}.')
 
 
 if __name__ == '__main__':
