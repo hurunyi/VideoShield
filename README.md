@@ -1,6 +1,23 @@
 # VideoShield: Regulating Diffusion-based Video Generation Models via Watermarking
 Official implementation of **“VideoShield: Regulating Diffusion-based Video Generation Models via Watermarking”**.
 
+## Visual Examples
+### ModelScope
+| Watermarked | Tampered | GT Mask | Pred Mask |
+|-------------|----------|---------|-----------|
+| ![Watermarked](https://github.com/hurunyi/VideoShield/blob/master/examples/modelscope/00/watermarked.gif) | ![Tampered](https://github.com/hurunyi/VideoShield/blob/master/examples/modelscope/00/tampered.gif) | ![GT Mask](https://github.com/hurunyi/VideoShield/blob/master/examples/modelscope/00/mask_gt.gif) | ![Pred Mask](https://github.com/hurunyi/VideoShield/blob/master/examples/modelscope/00/mask_pred.gif) |
+| ![Watermarked](https://github.com/hurunyi/VideoShield/blob/master/examples/modelscope/01/watermarked.gif) | ![Tampered](https://github.com/hurunyi/VideoShield/blob/master/examples/modelscope/01/tampered.gif) | ![GT Mask](https://github.com/hurunyi/VideoShield/blob/master/examples/modelscope/01/mask_gt.gif) | ![Pred Mask](https://github.com/hurunyi/VideoShield/blob/master/examples/modelscope/01/mask_pred.gif) |
+| ![Watermarked](https://github.com/hurunyi/VideoShield/blob/master/examples/modelscope/02/watermarked.gif) | ![Tampered](https://github.com/hurunyi/VideoShield/blob/master/examples/modelscope/02/tampered.gif) | ![GT Mask](https://github.com/hurunyi/VideoShield/blob/master/examples/modelscope/02/mask_gt.gif) | ![Pred Mask](https://github.com/hurunyi/VideoShield/blob/master/examples/modelscope/02/mask_pred.gif) |
+| ![Watermarked](https://github.com/hurunyi/VideoShield/blob/master/examples/modelscope/03/watermarked.gif) | ![Tampered](https://github.com/hurunyi/VideoShield/blob/master/examples/modelscope/03/tampered.gif) | ![GT Mask](https://github.com/hurunyi/VideoShield/blob/master/examples/modelscope/03/mask_gt.gif) | ![Pred Mask](https://github.com/hurunyi/VideoShield/blob/master/examples/modelscope/03/mask_pred.gif) |
+
+### Stable-Video-Diffusion
+| Watermarked | Tampered | GT Mask | Pred Mask |
+|-------------|----------|---------|-----------|
+| ![Watermarked](https://github.com/hurunyi/VideoShield/blob/master/examples/stable-video-diffusion/00/watermarked.gif) | ![Tampered](https://github.com/hurunyi/VideoShield/blob/master/examples/stable-video-diffusion/00/tampered.gif) | ![GT Mask](https://github.com/hurunyi/VideoShield/blob/master/examples/stable-video-diffusion/00/mask_gt.gif) | ![Pred Mask](https://github.com/hurunyi/VideoShield/blob/master/examples/stable-video-diffusion/00/mask_pred.gif) |
+| ![Watermarked](https://github.com/hurunyi/VideoShield/blob/master/examples/stable-video-diffusion/01/watermarked.gif) | ![Tampered](https://github.com/hurunyi/VideoShield/blob/master/examples/stable-video-diffusion/01/tampered.gif) | ![GT Mask](https://github.com/hurunyi/VideoShield/blob/master/examples/stable-video-diffusion/01/mask_gt.gif) | ![Pred Mask](https://github.com/hurunyi/VideoShield/blob/master/examples/stable-video-diffusion/01/mask_pred.gif) |
+| ![Watermarked](https://github.com/hurunyi/VideoShield/blob/master/examples/stable-video-diffusion/02/watermarked.gif) | ![Tampered](https://github.com/hurunyi/VideoShield/blob/master/examples/stable-video-diffusion/02/tampered.gif) | ![GT Mask](https://github.com/hurunyi/VideoShield/blob/master/examples/stable-video-diffusion/02/mask_gt.gif) | ![Pred Mask](https://github.com/hurunyi/VideoShield/blob/master/examples/stable-video-diffusion/02/mask_pred.gif) |
+| ![Watermarked](https://github.com/hurunyi/VideoShield/blob/master/examples/stable-video-diffusion/03/watermarked.gif) | ![Tampered](https://github.com/hurunyi/VideoShield/blob/master/examples/stable-video-diffusion/03/tampered.gif) | ![GT Mask](https://github.com/hurunyi/VideoShield/blob/master/examples/modelscope/03/mask_gt.gif) | ![Pred Mask](https://github.com/hurunyi/VideoShield/blob/master/examples/modelscope/03/mask_pred.gif) |
+
 
 ## Environment Setup
 ```
