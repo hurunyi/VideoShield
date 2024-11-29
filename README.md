@@ -69,7 +69,7 @@ python3 watermark_embedding_and_extraction.py \
 Note:
 
 - You can also skip specifying *--model_path* (skip **Model Download**). The script will automatically download the model to the default cache directory. 
-- The generated watermarked videos and watermark information will be saved in the ./results directory.
+- The generated watermarked videos and watermark information will be saved in the *./results* directory.
 
 ### 2. Temporal Tamper Localization
 
