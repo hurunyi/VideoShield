@@ -246,24 +246,24 @@ def main(args):
     os.makedirs(save_video_tampered_dir, exist_ok=True)
 
     mask_pred = video_mask_postprocess(video_mask[0])
-    export_to_video(
-        mask_pred,
-        os.path.join(save_dir, f'mask_pred.mp4')
-    )
+    save_mask_pred_path = os.path.join(save_dir, f'mask_pred.mp4')
+    export_to_video(mask_pred,save_mask_pred_path)
+    print(f'The pred mask video is saved to {save_mask_pred_path}.')
     save_video_frames(mask_pred, save_mask_pred_dir)
+    print(f'The pred mask video frames are saved to {save_mask_pred_dir}.')
 
     mask_gt = video_frames_mask
-    export_to_video(
-        mask_gt,
-        os.path.join(save_dir, f'mask_gt.mp4')
-    )
+    save_mask_gt_path = os.path.join(save_dir, f'mask_gt.mp4')
+    export_to_video(mask_gt, save_mask_gt_path)
+    print(f'The gt mask video is saved to {save_mask_gt_path}.')
     save_video_frames(mask_gt, save_mask_gt_dir)
+    print(f'The gt mask video frames are saved to {save_mask_gt_dir}.')
 
-    export_to_video(
-        video_frames_tampered,
-        os.path.join(save_dir, f'wm_tampered.mp4')
-    )
+    save_video_frames_tampered_path = os.path.join(save_dir, f'wm_tampered.mp4')
+    export_to_video(video_frames_tampered, save_video_frames_tampered_path)
+    print(f'The tampered video is saved to {save_video_frames_tampered_path}.')
     save_video_frames(video_frames_tampered, save_video_tampered_dir)
+    print(f'The tampered video frames are saved to {save_video_tampered_dir}.')
 
     f1, precision, recall, iou, auc = calculate_pixel_f1(
         np.stack(mask_pred, axis=0).flatten(),

@@ -69,7 +69,7 @@ python3 watermark_embedding_and_extraction.py \
 Note:
 
 - You can also skip specifying *--model_path* (skip **Model Download**). The script will automatically download the model to the default cache directory. 
-- The generated watermarked videos and watermark information will be saved in the *./results* directory.
+- The generated watermarked video and watermark information will be saved in the *./results* directory by default.
 
 ### 2. Temporal Tamper Localization
 
@@ -94,8 +94,9 @@ python3 temporal_tamper_localization.py \
 	--num_inversion_steps 25 \
 	--video_frames_dir './results/modelscope/a_red_panda_eating_leaves/wm/frames'
 ```
+Note:
 
-Default video frames directory: *'./results/stable-video-diffusion/a\_red\_panda\_eating\_leaves/wm/frames'* (can be modified as needed)
+- Default video frames directory: *'./results/stable-video-diffusion/a\_red\_panda\_eating\_leaves/wm/frames'* (can be modified as needed)
 
 ### 3. Spatial Tamper Localization
 
@@ -120,8 +121,10 @@ python3 spatial_tamper_localization.py \
 	--num_inversion_steps 25 \
 	--video_frames_dir './results/modelscope/a_red_panda_eating_leaves/wm/frames'
 ```
+Note:
 
-Default video frames directory: *'./results/stable-video-diffusion/a\_red\_panda\_eating\_leaves/wm/frames'* (can be modified as needed)
+- Default video frames directory: *'./results/stable-video-diffusion/a\_red\_panda\_eating\_leaves/wm/frames'* (can be modified as needed)
+- The tampered watermarked video, gt mask and pred mask will be saved in the *./results* directory by default.
 
 
 ## Acknowledgements
