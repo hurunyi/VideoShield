@@ -25,30 +25,97 @@ pip install -r requirements.txt
 
 ## Model Download
 
-Download the video model to your preferred directory. For example, the ModelScope model can be downloaded from: https://huggingface.co/ali-vilab/text-to-video-ms-1.7b.
+Download the video model to your preferred directory.
+
+- The text-to-video (T2V) model ModelScope can be downloaded from: https://huggingface.co/ali-vilab/text-to-video-ms-1.7b.
+- The image-to-video (I2V) model Stable-Video-Diffusion can be download from: https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt.
 
 ## Running the Scripts
 
 ### 1. Watermark Embedding and Extraction
 
+- For ModelScope:
+
+```bash
+python3 watermark_embedding_and_extraction.py \
+	--device 'cuda:0' \
+	--model_name modelscope \
+	--model_path <your_model_path> \
+	--num_frames 16 \
+	--height 256 \
+	--width 256 \
+	--frames_copy 8 \
+	--hw_copy 4 \
+	--channel_copy 1 \
+	--num_inference_steps 25
 ```
-python3 watermark_embedding_and_extraction.py --model_name modelscope --model_path <your_model_path>
+
+- For Stable-Video-Diffusion:
+
+```bash
+python3 watermark_embedding_and_extraction.py \
+	--device 'cuda:0' \
+	--model_name stable-video-diffusion \
+	--model_path <your_model_path> \
+	--num_frames 16 \
+	--height 512 \
+	--width 512 \
+	--frames_copy 8 \
+	--hw_copy 8 \
+	--channel_copy 1 \
+	--num_inference_steps 25
 ```
 
 Note: You can also skip specifying *--model_path* (skip **Model Download**). The script will automatically download the model to the default cache directory. Results will be saved in the ./results directory.
 
 ### 2. Temporal Tamper Localization
 
+- For ModelScope:
+
+```bash
+python3 temporal_tamper_localization.py \
+	--device 'cuda:0' \
+	--model_name modelscope \
+	--model_path <your_model_path> \
+	--num_inversion_steps 25 \
+	--video_frames_dir './results/modelscope/a_red_panda_eating_leaves/wm/frames'
 ```
-python3 temporal_tamper_localization.py --model_name modelscope --model_path <your_model_path>
+
+- For Stable-Video-Diffusion:
+
+```bash
+python3 temporal_tamper_localization.py \
+	--device 'cuda:0' \
+	--model_name stable-video-diffusion \
+	--model_path <your_model_path> \
+	--num_inversion_steps 25 \
+	--video_frames_dir './results/modelscope/a_red_panda_eating_leaves/wm/frames'
 ```
 
 Default video frames directory: *'./results/stable-video-diffusion/a\_red\_panda\_eating\_leaves/wm/frames'* (can be modified as needed)
 
 ### 3. Spatial Tamper Localization
 
+- For ModelScope:
+
+```bash
+python3 spatial_tamper_localization.py \
+	--device 'cuda:0' \
+	--model_name modelscope \
+	--model_path <your_model_path> \
+	--num_inversion_steps 25 \
+	--video_frames_dir './results/modelscope/a_red_panda_eating_leaves/wm/frames'
 ```
-python3 spatial_tamper_localization.py --model_name modelscope --model_path <your_model_path>
+
+- For Stable-Video-Diffusion:
+
+```bash
+python3 spatial_tamper_localization.py \
+	--device 'cuda:0' \
+	--model_name stable-video-diffusion \
+	--model_path <your_model_path> \
+	--num_inversion_steps 25 \
+	--video_frames_dir './results/modelscope/a_red_panda_eating_leaves/wm/frames'
 ```
 
 Default video frames directory: *'./results/stable-video-diffusion/a\_red\_panda\_eating\_leaves/wm/frames'* (can be modified as needed)

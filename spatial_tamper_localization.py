@@ -278,6 +278,6 @@ if __name__ == '__main__':
     parser.add_argument('--model_name', default='modelscope')
     parser.add_argument('--model_path', default=None)
     parser.add_argument('--num_inversion_steps', default=25, type=int)
-    parser.add_argument('--video_frames_path', default='./results/modelscope/a_red_panda_eating_leaves/wm/frames', type=str)
+    parser.add_argument('--video_frames_path', default=None, type=str)
     args = parser.parse_args()
     main(args)

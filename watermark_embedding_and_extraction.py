@@ -40,23 +40,13 @@ def main(args):
             model_path,
             torch_dtype=torch.float16,
         ).to(device)
-        args.height = 256
-        args.width = 256
-        args.hw_copy = 4
     elif model_name == 'stable-video-diffusion':
         video_pipe = StableVideoDiffusionPipeline.from_pretrained(
             model_path,
             torch_dtype=torch.float16,
         ).to(device)
-        args.height = 512
-        args.width = 512
-        args.hw_copy = 8
     else:
         raise ValueError
-
-    args.num_frames = 16
-    args.channel_copy = 1
-    args.frames_copy = 8
 
     inverse_scheduler = DDIMInverseScheduler.from_pretrained(
         model_path,
