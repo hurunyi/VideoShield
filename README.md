@@ -1,7 +1,7 @@
 # VideoShield: Regulating Diffusion-based Video Generation Models via Watermarking
 Official implementation of **“VideoShield: Regulating Diffusion-based Video Generation Models via Watermarking”**.
 
-## Visual Examples
+## Video Examples
 ### ModelScope
 | Watermarked | Tampered | GT Mask | Pred Mask |
 |-------------|----------|---------|-----------|
