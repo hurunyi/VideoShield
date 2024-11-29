@@ -85,7 +85,7 @@ def main(args):
             f'{video_dir}/wm_info.bin'
         )
 
-        print(f'Video generation and watermark embedding')
+        print(f'Video generation and watermark embedding:')
         video_pipe.scheduler = scheduler
         if model_name == 'modelscope':
             video_frames_w = video_pipe(
