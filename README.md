@@ -1,4 +1,4 @@
-# VideoShield: Regulating Diffusion-based Video Generation Models via Watermarking
+# VideoShield: Regulating Diffusion-based Video Generation Models via Watermarking (ICLR2025)
 Official implementation of **“VideoShield: Regulating Diffusion-based Video Generation Models via Watermarking”**.
 
 ## Video Examples
