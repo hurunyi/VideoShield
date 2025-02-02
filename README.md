@@ -129,3 +129,17 @@ Note:
 
 ## Acknowledgements
 This code builds on the code from the [GaussianShading](https://github.com/bsmhmmlf/Gaussian-Shading/tree/master).
+
+## Cite
+If you find this repository helpful, please cite the following:
+```
+@misc{hu2025videoshieldregulatingdiffusionbasedvideo,
+      title={VideoShield: Regulating Diffusion-based Video Generation Models via Watermarking}, 
+      author={Runyi Hu and Jie Zhang and Yiming Li and Jiwei Li and Qing Guo and Han Qiu and Tianwei Zhang},
+      year={2025},
+      eprint={2501.14195},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2501.14195}, 
+}
+```
