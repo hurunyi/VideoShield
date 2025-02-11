@@ -133,13 +133,10 @@ This code builds on the code from the [GaussianShading](https://github.com/bsmhm
 ## Cite
 If you find this repository helpful, please cite the following:
 ```
-@misc{hu2025videoshieldregulatingdiffusionbasedvideo,
-      title={VideoShield: Regulating Diffusion-based Video Generation Models via Watermarking}, 
-      author={Runyi Hu and Jie Zhang and Yiming Li and Jiwei Li and Qing Guo and Han Qiu and Tianwei Zhang},
-      year={2025},
-      eprint={2501.14195},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2501.14195}, 
+@inproceedings{hu2025videoshield,
+  title={VideoShield: Regulating Diffusion-based Video Generation Models via Watermarking}, 
+  author={Runyi Hu and Jie Zhang and Yiming Li and Jiwei Li and Qing Guo and Han Qiu and Tianwei Zhang},
+  booktitle={International Conference on Learning Representations (ICLR)},
+  year={2025}
 }
 ```
