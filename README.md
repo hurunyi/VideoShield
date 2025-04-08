@@ -131,7 +131,7 @@ Note:
 This code builds on the code from the [GaussianShading](https://github.com/bsmhmmlf/Gaussian-Shading/tree/master).
 
 ## Cite
-If you find this repository helpful, please cite the following:
+If you find this repository useful, please consider giving a star ⭐ and please cite as:
 ```
 @inproceedings{hu2025videoshield,
   title={VideoShield: Regulating Diffusion-based Video Generation Models via Watermarking}, 
